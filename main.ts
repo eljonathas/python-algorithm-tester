@@ -34,7 +34,7 @@ const createPDF = async (codesList: [CodeQuestion]) => {
     return new Promise(async (resolve, reject) => {
         console.log('⏰ Creating PDF...')
 
-        const doc = new PDFDocument;
+        const doc = new PDFDocument({ layout: 'portrait' });
         
         doc.pipe(fs.createWriteStream('docs/output.pdf'))
         doc.font('fonts/arial.ttf').fontSize(12)
