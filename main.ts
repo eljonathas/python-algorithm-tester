@@ -11,7 +11,7 @@ interface CodeQuestion {
 const runCodes = async (page: puppeteer.Page) => {
     return new Promise(async(resolve, reject) => {
         try {
-            console.log('🙂 Getting images...')
+            console.log('🙂 Getting screenshots...')
             const readCodesList = fs.readFileSync(path.resolve(__dirname, 'utils/codes.json'))
             const codesList = JSON.parse(readCodesList.toString()) as [CodeQuestion];
 
@@ -34,16 +34,16 @@ const createPDF = async (codesList: [CodeQuestion]) => {
     return new Promise(async (resolve, reject) => {
         console.log('⏰ Creating PDF...')
 
-        const doc = new PDFDocument({ layout: 'portrait' });
+        const doc = new PDFDocument({ layout: 'portrait'});
         
-        doc.pipe(fs.createWriteStream('files/output.pdf'))
+        doc.pipe(fs.createWriteStream('docs/output.pdf'))
         doc.font('fonts/arial.ttf').fontSize(12)
 
         for(let i = 0; i < codesList.length; i++){
             doc.text(codesList[i].question)
             doc.moveDown()
 
-            doc.image(`images/${i}.jpg`, {
+            doc.image(`screenshots/${i}.jpg`, {
                 fit: [250, 300],
                 align: 'center',
             })
@@ -71,7 +71,7 @@ const insertAndRun = async (page: puppeteer.Page, text: string, index: number) =
                 
                 if(lastLineButton){
                     await lastLineButton.click()
-                    await page.screenshot({ path: `images/${index}.jpg`})
+                    await page.screenshot({ path: `screenshots/${index}.jpg`})
 
                     resolve(true)
                 }
