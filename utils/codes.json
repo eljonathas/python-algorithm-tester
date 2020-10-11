@@ -1,0 +1,42 @@
+[
+    {
+        "question": "E1.1",
+        "code": "a=1\nb=2\nc=a\nc=c+1\nprint(a)\nprint(a+b)\nprint(a+c)"
+    },
+    {
+        "question": "E1.2",
+        "code": "# exemplos de variáveis & comentários\nA1 = 76\na1 = 12\naa_1 = a1+A1   # o valor de aa_1 é 88\nzero = 0"
+    },
+    {
+        "question": "E1.3 - Escreva o resultado de 2a x 3b. Onde a=3 e b=5.",
+        "code": "a=3\nb=5\nres=2*a * 3*b\nprint(res)"
+    },
+    {
+        "question": "E1.4 - Escreva o resultado de 2a x 3b. Onde a=7 e b=11.",
+        "code": "a=7\nb=11\nres=2*a * 3*b\nprint(res)"
+    },
+    {
+        "question": "E1.5 - Escreva o resultado de 4a x 2b. Onde a=3 e b=5.",
+        "code": "a=3\nb=5\nres=4*a * 2*b\nprint(res)"
+    },
+    {
+        "question": "E1.6 - Calcule a soma de três variáveis, a=3;b=5;c=11.",
+        "code": "a=3\nb=5\nc=11\nabc=a+b+c\nprint(abc)"
+    },
+    {
+        "question": "E1.7 - Seja um salário (sal) de 1000. Como dar um aumento de 15%. Qual o valor do aumento e do novo salário.",
+        "code": "sal=1000\npercent=15\naumento=sal*percent/100\nnovosal=sal+aumento\nprint(aumento, novosal)"
+    },
+    {
+        "question": "E1.8 - Seja um salário (sal) de 1500. Como dar um aumento de 20%. Qual o valor do aumento e do novo salário.",
+        "code": "sal=1500\npercent=20\naumento=sal*percent/100\nnovosal=sal+aumento\nprint(aumento, novosal)"
+    },
+    {
+        "question": "E1.9 - Seja um salário (sal) de 1500. Como dar um aumento de 10%. Qual o valor do aumento e do novo salário.",
+        "code": "sal=1500\npercent=10\naumento=sal*percent/100\nnovosal=sal+aumento\nprint(aumento, novosal)"
+    },
+    {
+        "question": "E1.8 - Seja um salário (sal) de 1800. Como dar um aumento de 1%. Qual o valor do aumento e do novo salário.",
+        "code": "sal=1800\npercent=1\naumento=sal*percent/100\nnovosal=sal+aumento\nprint(aumento, novosal)"
+    }
+]
